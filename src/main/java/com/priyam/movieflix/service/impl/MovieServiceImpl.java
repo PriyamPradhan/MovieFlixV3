@@ -1,9 +1,9 @@
 package com.priyam.movieflix.service.impl;
 
-import me.jysh.cinematic.exception.MovieNotFoundException;
-import me.jysh.cinematic.model.Movie;
-import me.jysh.cinematic.model.Screening;
-import me.jysh.cinematic.repository.MovieRepository;
+import com.priyam.movieflix.exception.MovieNotFoundException;
+import com.priyam.movieflix.model.Movie;
+import com.priyam.movieflix.model.Screening;
+import com.priyam.movieflix.repository.MovieRepository;
 import com.priyam.movieflix.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;

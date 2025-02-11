@@ -2,17 +2,16 @@ package com.priyam.movieflix.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
 import java.time.LocalTime;
 import java.util.Set;
 
-@Getter
-@Setter
+
 @NoArgsConstructor
 @Entity
 @Table(name = "booking")
@@ -44,4 +43,60 @@ public class Booking {
     @OneToMany(mappedBy = "booking", cascade = CascadeType.ALL)
     @JsonBackReference
     private Set<SeatBooked> bookedSeats;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Screening getScreening() {
+        return screening;
+    }
+
+    public void setScreening(Screening screening) {
+        this.screening = screening;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public LocalTime getBookingTime() {
+        return bookingTime;
+    }
+
+    public void setBookingTime(LocalTime bookingTime) {
+        this.bookingTime = bookingTime;
+    }
+
+    public boolean isBooked() {
+        return isBooked;
+    }
+
+    public void setBooked(boolean booked) {
+        isBooked = booked;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    public Set<SeatBooked> getBookedSeats() {
+        return bookedSeats;
+    }
+
+    public void setBookedSeats(Set<SeatBooked> bookedSeats) {
+        this.bookedSeats = bookedSeats;
+    }
 }

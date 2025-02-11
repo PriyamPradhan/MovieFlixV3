@@ -1,9 +1,11 @@
 package com.priyam.movieflix.handler;
 
 import lombok.extern.slf4j.Slf4j;
-import me.jysh.cinematic.controller.ScreeningController;
-import me.jysh.cinematic.exception.HousefullException;
-import me.jysh.cinematic.model.ErrorDetail;
+import com.priyam.movieflix.controller.ScreeningController;
+import com.priyam.movieflix.exception.HousefullException;
+import com.priyam.movieflix.model.ErrorDetail;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,10 +19,12 @@ import java.util.Date;
 @RestControllerAdvice(assignableTypes = ScreeningController.class)
 public class ScreeningExceptionHandler {
 
+    private final Logger logger = LoggerFactory.getLogger(ScreeningExceptionHandler.class);
+
     @ExceptionHandler(HousefullException.class)
     public ResponseEntity<?> handleHouseFullException(HousefullException ex, WebRequest request) {
 
-        log.debug("In Screening Exception Handler");
+        logger.info("In Screening Exception Handler");
 
 
         ErrorDetail error = new ErrorDetail(new Date(), "House Full!", ex.toString());

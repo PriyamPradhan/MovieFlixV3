@@ -1,7 +1,7 @@
 package com.priyam.movieflix.service.impl;
 
-import me.jysh.cinematic.model.User;
-import me.jysh.cinematic.repository.UserRepository;
+import com.priyam.movieflix.model.User;
+import com.priyam.movieflix.repository.UserRepository;
 import com.priyam.movieflix.service.UserService;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;

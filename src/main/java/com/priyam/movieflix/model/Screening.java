@@ -2,15 +2,13 @@ package com.priyam.movieflix.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 import lombok.*;
 
-import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Set;
 
-@Getter
-@Setter
 @NoArgsConstructor
 @Entity
 @Table(name = "screening")
@@ -53,4 +51,84 @@ public class Screening {
     @OneToMany(mappedBy = "screening", cascade = CascadeType.ALL)
     @JsonBackReference
     private Set<Booking> bookings;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public void setMovie(Movie movie) {
+        this.movie = movie;
+    }
+
+    public Auditorium getAuditorium() {
+        return auditorium;
+    }
+
+    public void setAuditorium(Auditorium auditorium) {
+        this.auditorium = auditorium;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public LocalTime getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(LocalTime startTime) {
+        this.startTime = startTime;
+    }
+
+    public LocalTime getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(LocalTime endTime) {
+        this.endTime = endTime;
+    }
+
+    public Boolean getFull() {
+        return isFull;
+    }
+
+    public void setFull(Boolean full) {
+        isFull = full;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Set<SeatBooked> getBookedSeats() {
+        return bookedSeats;
+    }
+
+    public void setBookedSeats(Set<SeatBooked> bookedSeats) {
+        this.bookedSeats = bookedSeats;
+    }
+
+    public Set<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(Set<Booking> bookings) {
+        this.bookings = bookings;
+    }
 }

@@ -1,7 +1,9 @@
 package com.priyam.movieflix.scheduled_task;
 
 import lombok.extern.slf4j.Slf4j;
-import me.jysh.cinematic.repository.ScreeningRepository;
+import com.priyam.movieflix.repository.ScreeningRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -14,6 +16,10 @@ import static java.time.temporal.ChronoUnit.DAYS;
 @Slf4j
 @Component
 public class DeleteSevenDayOldScreening {
+
+
+    private static final Logger log = LoggerFactory.getLogger(DeleteSevenDayOldScreening.class);
+    @Autowired
     private ScreeningRepository screeningRepository;
 
     @Autowired

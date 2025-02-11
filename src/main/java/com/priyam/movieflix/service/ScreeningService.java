@@ -1,7 +1,7 @@
 package com.priyam.movieflix.service;
 
-import me.jysh.cinematic.model.Screening;
-import me.jysh.cinematic.model.Seat;
+import com.priyam.movieflix.model.Screening;
+import com.priyam.movieflix.model.Seat;
 
 import java.time.LocalDate;
 import java.util.List;

@@ -3,11 +3,9 @@ package com.priyam.movieflix.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Set;
 
-@Getter
-@Setter
 @NoArgsConstructor
 @Entity
 @Table(name = "theatre")
@@ -23,4 +21,28 @@ public class Theatre {
     @OneToMany(mappedBy = "theatre", cascade = CascadeType.ALL)
     @JsonBackReference
     private Set<Auditorium> auditoriums;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Set<Auditorium> getAuditoriums() {
+        return auditoriums;
+    }
+
+    public void setAuditoriums(Set<Auditorium> auditoriums) {
+        this.auditoriums = auditoriums;
+    }
 }

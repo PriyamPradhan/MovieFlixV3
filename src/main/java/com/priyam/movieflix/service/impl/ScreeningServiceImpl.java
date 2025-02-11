@@ -1,9 +1,9 @@
 package com.priyam.movieflix.service.impl;
 
-import me.jysh.cinematic.exception.ScreeningNotFoundException;
-import me.jysh.cinematic.model.Screening;
-import me.jysh.cinematic.model.Seat;
-import me.jysh.cinematic.repository.ScreeningRepository;
+import com.priyam.movieflix.exception.ScreeningNotFoundException;
+import com.priyam.movieflix.model.Screening;
+import com.priyam.movieflix.model.Seat;
+import com.priyam.movieflix.repository.ScreeningRepository;
 import com.priyam.movieflix.service.ScreeningService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
@@ -52,7 +52,7 @@ public class ScreeningServiceImpl implements ScreeningService {
     @Override
     public List<Seat> getSeatsByScreeningId(Long screening_id) {
         Screening screening = getScreeningById(screening_id);
-        if (screening.getIsFull()) {
+        if (screening.getFull()) {
             return new ArrayList<>();
         }
         return new ArrayList<>(screening.getAuditorium().getSeats());

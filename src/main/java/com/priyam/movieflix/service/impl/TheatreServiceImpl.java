@@ -1,7 +1,7 @@
 package com.priyam.movieflix.service.impl;
 
-import me.jysh.cinematic.model.Theatre;
-import me.jysh.cinematic.repository.TheatreRepository;
+import com.priyam.movieflix.model.Theatre;
+import com.priyam.movieflix.repository.TheatreRepository;
 import com.priyam.movieflix.service.TheatreService;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package com.priyam.movieflix.service;
 
-import me.jysh.cinematic.model.SeatBooked;
+import com.priyam.movieflix.model.SeatBooked;
 
 import java.util.List;
 

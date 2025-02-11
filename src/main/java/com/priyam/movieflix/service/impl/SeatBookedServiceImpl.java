@@ -1,7 +1,7 @@
 package com.priyam.movieflix.service.impl;
 
-import me.jysh.cinematic.model.SeatBooked;
-import me.jysh.cinematic.repository.SeatBookedRepository;
+import com.priyam.movieflix.model.SeatBooked;
+import com.priyam.movieflix.repository.SeatBookedRepository;
 import com.priyam.movieflix.service.SeatBookedService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;

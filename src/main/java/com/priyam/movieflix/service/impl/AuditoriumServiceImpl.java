@@ -1,8 +1,8 @@
 package com.priyam.movieflix.service.impl;
 
-import me.jysh.cinematic.exception.AuditoriumNotFoundException;
-import me.jysh.cinematic.model.Auditorium;
-import me.jysh.cinematic.repository.AuditoriumRepository;
+import com.priyam.movieflix.exception.AuditoriumNotFoundException;
+import com.priyam.movieflix.model.Auditorium;
+import com.priyam.movieflix.repository.AuditoriumRepository;
 import com.priyam.movieflix.service.AuditoriumService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;

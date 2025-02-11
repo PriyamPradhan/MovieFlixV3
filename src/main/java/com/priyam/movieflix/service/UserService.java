@@ -1,6 +1,6 @@
 package com.priyam.movieflix.service;
 
-import me.jysh.cinematic.model.User;
+import com.priyam.movieflix.model.User;
 
 import java.util.List;
 
