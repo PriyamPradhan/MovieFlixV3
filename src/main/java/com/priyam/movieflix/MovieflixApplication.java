@@ -8,9 +8,6 @@ public class MovieflixApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MovieflixApplication.class, args);
-
-		System.out.println("Hello");
-
 	}
 
 }
